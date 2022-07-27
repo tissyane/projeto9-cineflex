@@ -15,4 +15,5 @@ body {
   height: 100vh;
   margin: 0 auto;
   background-color: #ffffff;
+  overflow-y: scroll;
 }
