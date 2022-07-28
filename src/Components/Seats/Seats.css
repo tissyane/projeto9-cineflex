@@ -1,0 +1,107 @@
+.seats {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  row-gap: 30px;
+  gap: 10px;
+  margin: 25px;
+  margin-top: 0;
+}
+
+.seats_number,
+.selected,
+.available,
+.unavailable {
+  width: 26px;
+  height: 26px;
+
+  font-size: 11px;
+  line-height: 12.89px;
+
+  background: #c3cfd9;
+  border: 1px solid #808f9d;
+  border-radius: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.seats_subtitle {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.subtitle-box {
+  height: 60px;
+  font-size: 13px;
+  line-height: 15.23px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.selected {
+  background: #8dd7cf;
+  border: 1px solid #1aae9e;
+  border-radius: 17px;
+}
+
+.available {
+  background: #c3cfd9;
+  border: 1px solid #7b8b99;
+  border-radius: 17px;
+}
+.unavailable {
+  background: #fbe192;
+  border: 1px solid #f7c52b;
+  border-radius: 17px;
+}
+
+.buyer_details {
+  margin: 25px 24px;
+  font-size: 18px;
+  line-height: 21.09px;
+}
+
+.buyer_details input {
+  width: 327px;
+  height: 51px;
+  margin-top: 5px;
+  padding-left: 18px;
+  background: #ffffff;
+  border: 1px solid #d5d5d5;
+  border-radius: 3px;
+}
+
+.buyer_details input::placeholder {
+  font-style: italic;
+  color: #afafaf;
+}
+
+.buyer_name,
+.buyer_cpf {
+  margin-bottom: 10px;
+}
+
+.button {
+  width: 225px;
+  height: 42px;
+  margin: 0 auto;
+  background: #e8833a;
+  border-radius: 3px;
+  font-size: 18px;
+  line-height: 21px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+}
