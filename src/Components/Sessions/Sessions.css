@@ -23,7 +23,16 @@
   align-items: center;
   text-decoration: none;
 }
+.time {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  gap: 20px;
+}
 
+.sessions_container {
+  margin-bottom: 110px;
+}
 .footer {
   background-color: #dfe6ed;
   width: 100vw;

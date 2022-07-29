@@ -23,13 +23,8 @@ export default function Home({ API }) {
       <div className="movies_container">
         {movies.map((movie) => (
           <div className="poster">
-            <Link to={`/sessoes/`}>
-              <img
-                key={movie.id}
-                id={movie.id}
-                src={movie.posterURL}
-                alt={movie.title}
-              />
+            <Link to={`/sessoes/${movie.id}`}>
+              <img key={movie.id} src={movie.posterURL} alt={movie.title} />
             </Link>
           </div>
         ))}

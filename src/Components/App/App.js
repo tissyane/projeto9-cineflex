@@ -9,7 +9,7 @@ import Seats from "../Seats/Seats";
 import Sessions from "../Sessions/Sessions";
 import Success from "../Success/Success";
 
-let API = "https://mock-api.driven.com.br/api/v5/cineflex";
+let API = "https://mock-api.driven.com.br/api/v7/cineflex";
 
 export default function App() {
   return (
@@ -18,7 +18,7 @@ export default function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home API={API} />} />
-          <Route path="/sessoes/" element={<Sessions />} />
+          <Route path="/sessoes/:movieId" element={<Sessions API={API} />} />
           <Route path="/assentos/" element={<Seats />} />
           <Route path="/sucesso/" element={<Success />} />
         </Routes>
