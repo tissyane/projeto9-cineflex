@@ -6,18 +6,17 @@ export const Footer = styled.div`
 
   height: 117px;
   margin: 0 auto;
-  border: 1px solid #9eadba;
-
+  padding: 0 15px;
   display: flex;
   align-items: center;
   position: fixed;
   bottom: 0;
 
-  div {
+  .image {
     width: 64px;
     height: 89px;
     background-color: #fff;
-    margin-left: 18px;
+
     margin-right: 21px;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 2px;
@@ -30,5 +29,11 @@ export const Footer = styled.div`
     height: 72px;
     object-fit: cover;
     margin: 8px;
+  }
+
+  p {
+    font-size: 26px;
+    line-height: 31px;
+    color: #293845;
   }
 `;

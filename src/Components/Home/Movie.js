@@ -1,23 +1,10 @@
-import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-
-import axios from "axios";
 
 import styled from "styled-components";
 
-export default function Movie({ API }) {
-  const [movies, setMovies] = useState([]);
-
-  useEffect(() => {
-    const promise = axios.get(`${API}/movies`);
-
-    promise.then((response) => {
-      setMovies(response.data);
-    });
-  }, [API]);
-
+export default function Movie({ movies }) {
   return (
-    <>
+    <MovieWrapper>
       {movies.map((movie) => (
         <Poster key={movie.id}>
           <Link to={`/sessoes/${movie.id}`}>
@@ -25,9 +12,16 @@ export default function Movie({ API }) {
           </Link>
         </Poster>
       ))}
-    </>
+    </MovieWrapper>
   );
 }
+
+const MovieWrapper = styled.div`
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+`;
 
 const Poster = styled.div`
   background: #ffffff;

@@ -1,5 +1,5 @@
 import styled from "styled-components";
 
 export const Page = styled.div`
-  margin-left: 24px;
+  margin: 0 24px 40px 24px;
 `;

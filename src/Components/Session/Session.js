@@ -1,32 +1,18 @@
-import { useState, useEffect } from "react";
-import { Link, useParams } from "react-router-dom";
-
-import axios from "axios";
+import { Link } from "react-router-dom";
 
 import styled from "styled-components";
-
 import { Button } from "../../commons/Button";
-import { Footer } from "../../commons/Footer";
-import { Page } from "../../commons/Page";
 
-export default function Session({ API }) {
-  const [sessions, setSessions] = useState({});
-  const { movieId } = useParams();
+import Loading from "../../commons/Loading";
 
-  useEffect(() => {
-    const promise = axios.get(`${API}/movies/${movieId}/showtimes`);
-
-    promise.then((response) => {
-      setSessions(response.data);
-    });
-  }, [API, movieId]);
-
+export default function Session({ sessions, index }) {
+  const check = Object.keys(sessions).length === 0;
   return (
-    <>
-      {Object.keys(sessions).length === 0 ? (
-        "Carregando"
+    <SessionWrapper>
+      {check ? (
+        <Loading />
       ) : (
-        <Page>
+        <>
           {sessions.days.map((session) => (
             <>
               <Sessions key={session.id}>
@@ -34,28 +20,26 @@ export default function Session({ API }) {
                 <div>
                   {session.showtimes.map((time) => (
                     <Link
-                      key={time.id}
+                      key={index}
                       style={{ textDecoration: "none" }}
                       to={`/assentos/${time.id}`}
                     >
-                      <Button>{time.name}</Button>
+                      <SmallButton key={time.id}>{time.name}</SmallButton>
                     </Link>
                   ))}
                 </div>
               </Sessions>
             </>
           ))}
-        </Page>
+        </>
       )}
-      <Footer>
-        <div key={sessions.id}>
-          <img src={sessions.posterURL} alt={sessions.title} />
-        </div>
-        <h1>{sessions.title}</h1>
-      </Footer>
-    </>
+    </SessionWrapper>
   );
 }
+
+const SessionWrapper = styled.div`
+  margin-bottom: 150px;
+`;
 
 const Sessions = styled.div`
   margin-bottom: 22px;
@@ -66,6 +50,10 @@ const Sessions = styled.div`
   div {
     display: flex;
     gap: 20px;
-    margin-top: 15px;
+    margin-top: 22px;
   }
+`;
+
+const SmallButton = styled(Button)`
+  width: 83px;
 `;
