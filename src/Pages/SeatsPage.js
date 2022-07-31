@@ -9,8 +9,9 @@ import { Button } from "../commons/Button";
 import { Footer } from "../commons/Footer";
 
 import Loading from "../commons/Loading";
-import Seats from "../Components/Seats/Seats";
+
 import BuyerForm from "../Components/Seats/BuyerForm";
+import Seats from "../Components/Seats/Seats";
 
 export default function SeatsPage({ API }) {
   const [seats, setSeats] = useState({});
@@ -31,19 +32,13 @@ export default function SeatsPage({ API }) {
         <Loading />
       ) : (
         <>
-          <Page>
-            <Title>
-              <h2>Selecione o(s) assento(s)</h2>
-            </Title>
-            <Seats seats={seats} key={seats.id} />
+          <Title>
+            <h2>Selecione o(s) assento(s)</h2>
+          </Title>
+          <Seats seats={seats.seats} key={seats.id} />
 
-            <BuyerForm />
-            <Button>
-              <Link style={{ textDecoration: "none" }} to={"/sucesso/"}>
-                Reservar assento(s)
-              </Link>
-            </Button>
-          </Page>
+          <BuyerForm />
+
           <Footer>
             <div className="image">
               <img src={seats.movie.posterURL} alt={seats.movie.title} />
