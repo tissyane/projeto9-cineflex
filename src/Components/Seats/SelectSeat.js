@@ -60,5 +60,6 @@ export const SeatCard = styled.div`
   :hover {
     cursor: ${(props) => (props.hover ? props.cursor : "initial")};
     transform: scale(${(props) => (props.hover ? 0.95 : 1)});
+    filter: brightness(${(props) => (props.hover ? 1.1 : 1)});
   }
 `;

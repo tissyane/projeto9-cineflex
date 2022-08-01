@@ -53,6 +53,7 @@ const Container = styled.div`
 
   div {
     margin-top: 15px;
+    margin-bottom: 30px;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
