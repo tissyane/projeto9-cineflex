@@ -6,6 +6,7 @@ import { Button } from "../../commons/Button";
 import Loading from "../../commons/Loading";
 
 export default function Session({ sessions, index }) {
+  window.scrollTo(0, 0);
   const check = Object.keys(sessions).length === 0;
   return (
     <SessionWrapper>

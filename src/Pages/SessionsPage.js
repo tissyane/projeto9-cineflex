@@ -13,6 +13,7 @@ export default function SessionsPage({ API, index }) {
   const { movieId } = useParams();
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     const promise = axios.get(`${API}/movies/${movieId}/showtimes`);
 
     promise.then((response) => {

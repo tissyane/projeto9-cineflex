@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export default function Movie({ movies }) {
+  window.scrollTo(0, 0);
   return (
     <MovieWrapper>
       {movies.map((movie) => (

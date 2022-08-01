@@ -11,6 +11,7 @@ export default function HomePage({ API, index }) {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     const promise = axios.get(`${API}/movies`);
 
     promise.then((response) => {

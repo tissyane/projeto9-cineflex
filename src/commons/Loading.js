@@ -11,7 +11,10 @@ export default function Loading() {
 
 const Load = styled.div`
   background-color: white;
-  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   img {
     width: 100vw;
