@@ -35,4 +35,9 @@ const Poster = styled.div`
     object-fit: cover;
     margin: 8px;
   }
+
+  img:hover {
+    transform: scale(0.95);
+    opacity: 0.7;
+  }
 `;

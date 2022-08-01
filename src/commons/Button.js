@@ -6,6 +6,7 @@ export const Button = styled.button`
   margin: 0 auto;
 
   background-color: #e8833a;
+  font-family: "Roboto", sans-serif;
   font-size: 18px;
   line-height: 21.09px;
   color: #ffffff;
@@ -16,4 +17,10 @@ export const Button = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
+
+  &:hover {
+    transform: translateY(2px);
+    filter: brightness(120%);
+  }
 `;

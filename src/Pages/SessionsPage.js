@@ -8,7 +8,7 @@ import { Footer } from "../commons/Footer";
 
 import Session from "../Components/Session/Session";
 
-export default function SessionsPage({ API }) {
+export default function SessionsPage({ API, index }) {
   const [sessions, setSessions] = useState({});
   const { movieId } = useParams();
 
@@ -27,10 +27,10 @@ export default function SessionsPage({ API }) {
           <h2>Selecione o horário</h2>
         </Title>
 
-        <Session sessions={sessions} key={sessions.id} />
+        <Session sessions={sessions} />
       </Page>
 
-      <Footer key={sessions.id}>
+      <Footer key={index}>
         <div className="image">
           <img src={sessions.posterURL} alt={sessions.title} />
         </div>

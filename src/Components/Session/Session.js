@@ -15,16 +15,16 @@ export default function Session({ sessions, index }) {
         <>
           {sessions.days.map((session) => (
             <>
-              <Sessions key={session.id}>
+              <Sessions key={index}>
                 {session.weekday} - {session.date}
                 <div>
                   {session.showtimes.map((time) => (
                     <Link
-                      key={index}
+                      key={time.id}
                       style={{ textDecoration: "none" }}
                       to={`/assentos/${time.id}`}
                     >
-                      <SmallButton key={time.id}>{time.name}</SmallButton>
+                      <SmallButton key={index}>{time.name}</SmallButton>
                     </Link>
                   ))}
                 </div>
@@ -56,4 +56,10 @@ const Sessions = styled.div`
 
 const SmallButton = styled(Button)`
   width: 83px;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.1);
+    filter: brightness(120%);
+  }
 `;

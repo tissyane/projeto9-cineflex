@@ -1,11 +1,10 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 import styled from "styled-components";
-import { Page } from "../commons/Page";
+
 import { Title } from "../commons/Title";
-import { Button } from "../commons/Button";
 import { Footer } from "../commons/Footer";
 
 import Loading from "../commons/Loading";
@@ -13,8 +12,12 @@ import Loading from "../commons/Loading";
 import BuyerForm from "../Components/Seats/BuyerForm";
 import Seats from "../Components/Seats/Seats";
 
-export default function SeatsPage({ API }) {
+export default function SeatsPage({ API, index }) {
   const [seats, setSeats] = useState({});
+  const [seatIds, setSeatIds] = useState([]);
+  const [seatNames, setSeatNames] = useState([]);
+  const [name, setName] = useState("");
+  const [cpf, setCpf] = useState("");
   const { sessionId } = useParams();
 
   useEffect(() => {
@@ -35,9 +38,26 @@ export default function SeatsPage({ API }) {
           <Title>
             <h2>Selecione o(s) assento(s)</h2>
           </Title>
-          <Seats seats={seats.seats} key={seats.id} />
+          <Seats
+            key={seats.id}
+            seats={seats.seats}
+            id={seats.id}
+            seatIds={seatIds}
+            setSeatIds={setSeatIds}
+            seatNames={seatNames}
+            setSeatNames={setSeatNames}
+          />
 
-          <BuyerForm />
+          <BuyerForm
+            key={index}
+            seats={seats}
+            name={name}
+            setName={setName}
+            cpf={cpf}
+            setCpf={setCpf}
+            seatIds={seatIds}
+            seatNames={seatNames}
+          />
 
           <Footer>
             <div className="image">
