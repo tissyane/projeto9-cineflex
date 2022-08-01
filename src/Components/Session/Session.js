@@ -4,6 +4,7 @@ import styled from "styled-components";
 import { Button } from "../../commons/Button";
 
 import Loading from "../../commons/Loading";
+import { Page } from "../../commons/Page";
 
 export default function Session({ sessions, index }) {
   window.scrollTo(0, 0);
@@ -11,7 +12,10 @@ export default function Session({ sessions, index }) {
   return (
     <SessionWrapper>
       {check ? (
-        <Loading />
+        <Page>
+          {" "}
+          <Loading />
+        </Page>
       ) : (
         <>
           {sessions.days.map((session) => (

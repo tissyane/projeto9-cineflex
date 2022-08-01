@@ -20,7 +20,11 @@ export default function HomePage({ API, index }) {
   }, [API]);
 
   if (movies.length === 0) {
-    return <Loading />;
+    return (
+      <Page>
+        <Loading />
+      </Page>
+    );
   }
 
   return (

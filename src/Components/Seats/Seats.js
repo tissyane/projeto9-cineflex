@@ -59,14 +59,18 @@ export default function Seats({
 }
 
 const SeatsContainer = styled.section`
-  margin: -20px 24px 0;
+  margin: -20px auto 0;
+  max-width: 360px;
   display: flex;
+  align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 18px 8px;
 `;
 
 const WrapperSubtitle = styled.div`
   margin-top: 20px;
+  max-width: 500px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;

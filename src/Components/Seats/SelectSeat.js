@@ -27,15 +27,9 @@ export function Seat({
         setSeatNames([...seatNames, name]);
       } else if (settings.type === 1) {
         setSettings(availableSettings);
-        setSeatIds((selected) =>
-          selected.filter((seatIds) => {
-            return seatIds !== id;
-          })
-        );
+        setSeatIds((selected) => selected.filter((seatIds) => seatIds !== id));
         setSeatNames((selected) =>
-          selected.filter((seatNames) => {
-            return seatNames !== name;
-          })
+          selected.filter((seatNames) => seatNames !== name)
         );
       }
     } else {

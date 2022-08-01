@@ -4,6 +4,7 @@ import { useState } from "react";
 import axios from "axios";
 import { Button } from "../../commons/Button";
 import Loading from "../../commons/Loading";
+import { Page } from "../../commons/Page";
 
 export default function BuyerForm({
   seats,
@@ -52,7 +53,9 @@ export default function BuyerForm({
   return (
     <>
       {sent === true ? (
-        <Loading />
+        <Page>
+          <Loading />
+        </Page>
       ) : (
         <ContainerForm onSubmit={handleSubmit}>
           <div>
@@ -88,7 +91,7 @@ export default function BuyerForm({
 }
 
 const ContainerForm = styled.form`
-  margin-top: 36px;
+  margin-top: 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -118,5 +121,5 @@ const ContainerForm = styled.form`
 `;
 
 const ButtonFinal = styled(Button)`
-  margin-top: 40px;
+  margin-top: 30px;
 `;
