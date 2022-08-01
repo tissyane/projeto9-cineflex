@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import backarrow from "../assets/images/backarrow2.png";
+import backarrow from "../assets/images/backarrow.png";
 import { useNavigate, useLocation } from "react-router-dom";
 
 export default function Header() {
@@ -39,7 +39,7 @@ const Container = styled.div`
     left: 15px;
     &:hover {
       transform: scale(1.2);
-      filter: brightness(180%);
+      filter: brightness(300%);
     }
   }
 

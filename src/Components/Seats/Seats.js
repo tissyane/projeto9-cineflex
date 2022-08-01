@@ -69,7 +69,9 @@ const SeatsContainer = styled.section`
 `;
 
 const WrapperSubtitle = styled.div`
+  margin: 0 auto;
   margin-top: 20px;
+
   max-width: 500px;
   display: flex;
   justify-content: space-evenly;

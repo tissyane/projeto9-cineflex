@@ -10,8 +10,10 @@ export default function Loading() {
 }
 
 const Load = styled.div`
+  position: fixed;
+  top: 200px;
+  left: 10px;
   background-color: white;
-  margin-top: 70px;
   display: flex;
   align-items: center;
   justify-content: center;
