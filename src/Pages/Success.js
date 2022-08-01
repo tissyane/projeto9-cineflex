@@ -5,6 +5,7 @@ import { Page } from "../commons/Page";
 import { Title } from "../commons/Title";
 
 export default function Success() {
+  window.scrollTo(0, 0);
   const { state } = useLocation();
   let { cpf, name, time, date, title, seatNames } = state;
   seatNames.sort((a, b) => {

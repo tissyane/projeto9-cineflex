@@ -22,6 +22,7 @@ export default function SeatsPage({ API, index }) {
   const { sessionId } = useParams();
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     const promise = axios.get(`${API}/showtimes/${sessionId}/seats`);
 
     promise.then((response) => {
