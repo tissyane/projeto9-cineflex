@@ -7,7 +7,7 @@ import SeatsPage from "../../Pages/SeatsPage";
 import Success from "../../Pages/Success";
 import Header from "../../commons/Header";
 
-let API = "https://mock-api.driven.com.br/api/v7/cineflex";
+const API = "https://mock-api.driven.com.br/api/v7/cineflex";
 
 export default function App() {
   return (

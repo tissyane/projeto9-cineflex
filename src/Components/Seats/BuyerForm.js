@@ -17,7 +17,7 @@ export default function BuyerForm({
 }) {
   const [sent, setSent] = useState(false);
 
-  let navigate = useNavigate();
+  const navigate = useNavigate();
 
   function handleSubmit(event) {
     event.preventDefault();
